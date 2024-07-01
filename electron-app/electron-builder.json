@@ -1,0 +1,29 @@
+{
+    "appId": "com.example.my-electron-app",
+    "productName": "My Electron App",
+    "directories": {
+      "output": "dist2"
+    },
+    "files":["index.js","index.html", "server.js"],
+    "extraResources":[{
+      "from":"../my-app/build",
+      "to":"./build"
+    },{
+      "from":"../api/dist",
+      "to":"./dist"
+    },
+    {
+      "from":"../api/node_modules",
+      "to":"./node_modules"
+    }],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis" 
+    },
+    "linux": {
+      "target": ["AppImage", "deb"]
+    }
+  }
+  
